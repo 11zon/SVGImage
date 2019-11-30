@@ -37,11 +37,3 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
 
 }
-task run(type: Exec, dependsOn: 'installDebug') {
-
-    description 'Installs the APK and runs the main activity: "gradlew :samples:???:run"'
-
-    commandLine "${android.sdkDirectory}/platform-tools/adb", 'shell', 'am', 'start', '-n', 'com.bumptech.svgsample.app/.MainActivity'
-
-}
-
